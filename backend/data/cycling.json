@@ -1,0 +1,127 @@
+[
+    {
+        "name": "Stanley Park Seawall",
+        "difficulty": "☆☆",
+        "location": "Stanley Park, Vancouver"
+    },
+    {
+        "name": "Sunset Beach to Second Beach",
+        "difficulty": "☆☆",
+        "location": "Sunset Beach Park, Vancouver"
+    },
+    {
+        "name": "Seaside - False Creek South",
+        "difficulty": "☆☆",
+        "location": "Creekside Park, Vancouver"
+    },
+    {
+        "name": "Stanley Park Inner Loop",
+        "difficulty": "☆☆☆",
+        "location": "Stanley Park, Vancouver"
+    },
+    {
+        "name": "Creekside Park to English Bay",
+        "difficulty": "☆☆",
+        "location": "Vancouver, British Columbia, Canada"
+    },
+    {
+        "name": "Vancouver Family-Friendly Walking Tour",
+        "difficulty": "☆☆",
+        "location": "Vancouver, British Columbia, Canada"
+    },
+    {
+        "name": "Vancouver Sea Wall: False Creek (Downtown Side)",
+        "difficulty": "☆☆",
+        "location": "Sunset Beach Park, Vancouver"
+    },
+    {
+        "name": "Trout Lake Loop",
+        "difficulty": "☆☆",
+        "location": "John Hendry Park, Vancouver"
+    },
+    {
+        "name": "Beaver Lake - Stanley Park Seawall",
+        "difficulty": "☆☆☆",
+        "location": "Stanley Park, Vancouver"
+    },
+    {
+        "name": "Arbutus Greenway",
+        "difficulty": "☆☆",
+        "location": "Vancouver, British Columbia, Canada"
+    },
+    {
+        "name": "Gastown - Coal Harbour - English Bay and Yaletown Loop",
+        "difficulty": "☆☆",
+        "location": "Vancouver, British Columbia, Canada"
+    },
+    {
+        "name": "Avison Trail - Seawall Path - Merilees Trail - Siwash Rock Trail",
+        "difficulty": "☆☆",
+        "location": "Stanley Park, Vancouver"
+    },
+    {
+        "name": "Sunset Beach Park",
+        "difficulty": "☆☆",
+        "location": "Sunset Beach Park, Vancouver"
+    },
+    {
+        "name": "Fraser Foreshore Park Trail",
+        "difficulty": "☆☆",
+        "location": "Barnaby Fraser Foreshore Park, Vancouver"
+    },
+    {
+        "name": "BC Parkway",
+        "difficulty": "☆☆",
+        "location": "Vancouver, British Columbia, Canada"
+    },
+    {
+        "name": "Second Narrows and Lions Gate (Road Cycling)",
+        "difficulty": "☆☆☆",
+        "location": "Andy Livingstone Park, Vancouver"
+    },
+    {
+        "name": "Trans Canada Trail: New Brighton Park - Kensington Park",
+        "difficulty": "☆☆",
+        "location": "Vancouver, British Columbia, Canada"
+    },
+    {
+        "name": "Second Beach Seawall and Lost Lagoon Loop",
+        "difficulty": "☆☆",
+        "location": "Stanley Park, Vancouver"
+    },
+    {
+        "name": "Seaside Bike Path: Alexandra Park - Hastings Mill Park",
+        "difficulty": "☆☆☆",
+        "location": "Vancouver, British Columbia, Canada"
+    },
+    {
+        "name": "North Arm Bridge Bikeway",
+        "difficulty": "☆☆",
+        "location": "Vancouver, British Columbia, Canada"
+    },
+    {
+        "name": "Kitsilano Beach to Secret Beach",
+        "difficulty": "☆☆",
+        "location": "Vancouver, British Columbia, Canada"
+    },
+    {
+        "name": "Vancouver Architecture Walking Tour",
+        "difficulty": "☆☆",
+        "location": "Robson Square, Vancouver"
+    },
+    {
+        "name": "Musqueam Park via Fraser River Trail",
+        "difficulty": "☆☆",
+        "location": "Fraser River Park, Vancouver"
+    },
+    {
+        "name": "Sanctuary Pond Loop",
+        "difficulty": "☆☆",
+        "location": "Vancouver, British Columbia, Canada"
+    },
+    {
+        "name": "Pacific Spirit via Council, Top and Sword Fern",
+        "difficulty": "☆☆☆",
+        "location": "Pacific Spirit Regional Park, Vancouver"
+    }
+]

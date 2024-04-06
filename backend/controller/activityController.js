@@ -1,4 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
+const Activity = require( "../models/activity.js");
+
 
 const url = 'mongodb://0.0.0.0:27017/';
 const client = new MongoClient(url);
@@ -7,67 +9,60 @@ const COLLECTION = "activities"
 const DATABASE = "arcteryx"
 
 
-const addActivity = async (name, difficulty, location, type) => {
-    const insert = async (name, difficulty, location, type) => {
-      try {
-        await client.connect();
-        const database = client.db(DATABASE);
-        const activities = database.collection(COLLECTION);
+const addActivity = async (req, res, next) => {
+    let activity;
+    const { name, difficulty, location, type } = req.body;
   
-        const doc = { name: name, difficulty: difficulty, location: location, type: type};
-        const result = await activities.insertOne(doc);
-        return result;
-      } finally {
-        await client.close();
-      }
-    };
-    const result = await insert(name, difficulty, location, type);
-    return result;
-  };
+    try {
+      activity = new Activity({ name, difficulty, location, type });
+      activity = await activity.save();
+    } catch (e) {
+      console.log(e);
+      return res.status(401).json({ message: "Malformed request" });
+    }
+  
+    if (!activity) {
+      return res.status(500).json({ message: "Unexpected error occured" });
+    }
+  
+    return res
+      .status(200)
+      .json({ message: "Successfully added activity to activities" });
+};
 
+  
+const getActivities = async (req, res, next) => {
+    let activities;
+    try {
+        activities = await Activities.find();
+    } catch (e) {
+      console.log(e);
+    }
+  
+    if (!activities) {
+      return res.status(500).json({ message: "Unexpected error" });
+    }
+  
+    return res.status(200).json({ activities });
+};
 
+const deleteActivity = async (req, res, next) => {
+    let activity;
+    const name = req.params.name;
   
-const getActivities = async () => {
-    const getAll = async () => {
-        try {
-          await client.connect();
-          const database = client.db(DATABASE);
-          const activities = database.collection(COLLECTION);
-    
-          const query = {};
-          const options = { projection: { name: 1, difficulty: 1, location: 1 , type: 1} };
-          const cursor = activities.find(query, options);
-          const result = [];
-          await cursor.forEach((entry) => {
-            result.push(entry);
-          });
-          return result;
-        } finally {
-          await client.close();
-        }
-      };
-      const result = await getAll();
-      return result;
-  };
-
-const deleteActivity = async (name) => {
-    const deleteValue = async (name) => {
-      try {
-        await client.connect();
-        const database = client.db(DATABASE);
-        const activities = database.collection(COLLECTION);
+    try {
+      activity = await Activity.findByIdAndDelete(name);
+    } catch (e) {
+      console.log(e);
+      return res.status(500).json({ message: "Unexpected error occured" });
+    }
   
-        const query = { name: name};
+    if (!gift) {
+      return res.status(404).json({ message: "Activity not found" });
+    }
   
-        const result = await activities.deleteOne(query);
-        return result;
-      } finally {
-        await client.close();
-      }
-    };
-    const result = await deleteValue(name);
-    return result;
-  };
+    return res.status(200).json({ message: "Activity successfully deleted" });
+};
 
   module.exports = {
     addActivity,
