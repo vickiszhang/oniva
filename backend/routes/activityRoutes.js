@@ -5,29 +5,29 @@ const {
   getActivities,
   deleteActivity,
 } = require("../controller/activityController.js");
+const { check, param } = require("express-validator");
+const { validateResults } = require("../middlewares/Validation.js");
 
 
-router.post("/add", async (req, res) => {
+router.post(
+    "/add",
+    [
+      check("name").not().isEmpty(),
+      check("difficulty").not().isEmpty(),
+      check("location").not().isEmpty(),
+      check("type").not().isEmpty(),
+      validateResults,
+    ],
+    addActivity
+  );
 
-  const name = req.body.name;
-  const difficulty = req.body.difficulty;
-  const location = req.body.location;
-  const type = req.body.type;
+router.get("/get", getActivities);
 
-  const activity = await addActivity(name, difficulty, location, type);
-  res.send(activity);
-});
+router.delete(
+    "/delete/:name",
+    [param("name").not().isEmpty(), validateResults],
+    deleteActivity
+);
 
-router.get("/get", async (req, res) => {
-
-  const activities = await getActivities();
-  res.send(activities);
-});
-
-router.delete("/delete/:name", async (req, res) => {
-    const name = req.params.name;
-    const result = await deleteActivity(name);
-    res.send(result);
-  });
 
 module.exports = router;

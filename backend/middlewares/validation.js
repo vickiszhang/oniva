@@ -1,6 +1,6 @@
-import { validationResult } from "express-validator";
+const  validationResult = require( "express-validator");
 
-export function validateResults(req, res, next) {
+function validateResults(req, res, next) {
     const validationErrors = validationResult(req);
     const errorMessages = [];
 
@@ -13,3 +13,7 @@ export function validateResults(req, res, next) {
     }
     next();
 }
+
+module.exports = {
+    validateResults
+};
