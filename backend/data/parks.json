@@ -1,0 +1,422 @@
+[
+    {
+        "name": "Jones Park",
+        "difficulty": "☆",
+        "location": "Jones Park"
+    },
+    {
+        "name": "Kaslo Park",
+        "difficulty": "☆",
+        "location": "Kaslo Park"
+    },
+    {
+        "name": "Kensington Park",
+        "difficulty": "☆",
+        "location": "Kensington Park"
+    },
+    {
+        "name": "Kerrisdale Centennial Park",
+        "difficulty": "☆",
+        "location": "Kerrisdale Centennial Park"
+    },
+    {
+        "name": "Kerrisdale Park",
+        "difficulty": "☆",
+        "location": "Kerrisdale Park"
+    },
+    {
+        "name": "Killarney Park",
+        "difficulty": "☆",
+        "location": "Killarney Park"
+    },
+    {
+        "name": "Kingcrest Park",
+        "difficulty": "☆",
+        "location": "Kingcrest Park"
+    },
+    {
+        "name": "Kinross Ravine Park",
+        "difficulty": "☆",
+        "location": "Kinross Ravine Park"
+    },
+    {
+        "name": "Kitsilano Beach Park",
+        "difficulty": "☆",
+        "location": "Kitsilano Beach Park"
+    },
+    {
+        "name": "Langara Park",
+        "difficulty": "☆",
+        "location": "Langara Park"
+    },
+    {
+        "name": "Locarno Park",
+        "difficulty": "☆",
+        "location": "Locarno Park"
+    },
+    {
+        "name": "MacDonald Park",
+        "difficulty": "☆",
+        "location": "MacDonald Park"
+    },
+    {
+        "name": "MacLean Park",
+        "difficulty": "☆",
+        "location": "MacLean Park"
+    },
+    {
+        "name": "Major Matthews Park",
+        "difficulty": "☆",
+        "location": "Major Matthews Park"
+    },
+    {
+        "name": "Malkin Park",
+        "difficulty": "☆",
+        "location": "Malkin Park"
+    },
+    {
+        "name": "Maple Grove Park",
+        "difficulty": "☆",
+        "location": "Maple Grove Park"
+    },
+    {
+        "name": "Margaret Pigott Park",
+        "difficulty": "☆",
+        "location": "Margaret Pigott Park"
+    },
+    {
+        "name": "Marina Square",
+        "difficulty": "☆",
+        "location": "Marina Square"
+    },
+    {
+        "name": "Marpole Park",
+        "difficulty": "☆",
+        "location": "Marpole Park"
+    },
+    {
+        "name": "May & Lorne Brown Park",
+        "difficulty": "☆",
+        "location": "May & Lorne Brown Park"
+    },
+    {
+        "name": "McAuley Park",
+        "difficulty": "☆",
+        "location": "McAuley Park"
+    },
+    {
+        "name": "McBride Park",
+        "difficulty": "☆",
+        "location": "McBride Park"
+    },
+    {
+        "name": "McCleery Park",
+        "difficulty": "☆",
+        "location": "McCleery Park"
+    },
+    {
+        "name": "McGill Park",
+        "difficulty": "☆",
+        "location": "McGill Park"
+    },
+    {
+        "name": "McSpadden Park",
+        "difficulty": "☆",
+        "location": "McSpadden Park"
+    },
+    {
+        "name": "Melbourne Park",
+        "difficulty": "☆",
+        "location": "Melbourne Park"
+    },
+    {
+        "name": "Memorial South Park",
+        "difficulty": "☆",
+        "location": "Memorial South Park"
+    },
+    {
+        "name": "Memorial West Park",
+        "difficulty": "☆",
+        "location": "Memorial West Park"
+    },
+    {
+        "name": "Moberly Park",
+        "difficulty": "☆",
+        "location": "Moberly Park"
+    },
+    {
+        "name": "Montgomery Park",
+        "difficulty": "☆",
+        "location": "Montgomery Park"
+    },
+    {
+        "name": "Morton Park",
+        "difficulty": "☆",
+        "location": "Morton Park"
+    },
+    {
+        "name": "Mosaic Creek Park",
+        "difficulty": "☆",
+        "location": "Mosaic Creek Park"
+    },
+    {
+        "name": "Mount Pleasant Park",
+        "difficulty": "☆",
+        "location": "Mount Pleasant Park"
+    },
+    {
+        "name": "Musqueam Park",
+        "difficulty": "☆",
+        "location": "Musqueam Park"
+    },
+    {
+        "name": "Nanaimo Park",
+        "difficulty": "☆",
+        "location": "Nanaimo Park"
+    },
+    {
+        "name": "Nat Bailey Stadium",
+        "difficulty": "☆",
+        "location": "Nat Bailey Stadium"
+    },
+    {
+        "name": "Nelson Park",
+        "difficulty": "☆",
+        "location": "Nelson Park"
+    },
+    {
+        "name": "New Brighton Park",
+        "difficulty": "☆",
+        "location": "New Brighton Park"
+    },
+    {
+        "name": "Norquay Park",
+        "difficulty": "☆",
+        "location": "Norquay Park"
+    },
+    {
+        "name": "Oak Meadows Park",
+        "difficulty": "☆",
+        "location": "Oak Meadows Park"
+    },
+    {
+        "name": "Oak Park",
+        "difficulty": "☆",
+        "location": "Oak Park"
+    },
+    {
+        "name": "Oppenheimer Park",
+        "difficulty": "☆",
+        "location": "Oppenheimer Park"
+    },
+    {
+        "name": "Oxford Park",
+        "difficulty": "☆",
+        "location": "Oxford Park"
+    },
+    {
+        "name": "Pandora Park",
+        "difficulty": "☆",
+        "location": "Pandora Park"
+    },
+    {
+        "name": "Price Park",
+        "difficulty": "☆",
+        "location": "Price Park"
+    },
+    {
+        "name": "Prince Edward Park",
+        "difficulty": "☆",
+        "location": "Prince Edward Park"
+    },
+    {
+        "name": "Prince of Wales Park",
+        "difficulty": "☆",
+        "location": "Prince of Wales Park"
+    },
+    {
+        "name": "Quilchena Park",
+        "difficulty": "☆",
+        "location": "Quilchena Park"
+    },
+    {
+        "name": "Ravine Park",
+        "difficulty": "☆",
+        "location": "Ravine Park"
+    },
+    {
+        "name": "Renfrew Community Park",
+        "difficulty": "☆",
+        "location": "Renfrew Community Park"
+    },
+    {
+        "name": "Renfrew Ravine Park",
+        "difficulty": "☆",
+        "location": "Renfrew Ravine Park"
+    },
+    {
+        "name": "Riley Park",
+        "difficulty": "☆",
+        "location": "Riley Park"
+    },
+    {
+        "name": "Riverfront Park",
+        "difficulty": "☆",
+        "location": "Riverfront Park"
+    },
+    {
+        "name": "Riverview Park",
+        "difficulty": "☆",
+        "location": "Riverview Park"
+    },
+    {
+        "name": "Robson Park",
+        "difficulty": "☆",
+        "location": "Robson Park"
+    },
+    {
+        "name": "Rosemary Brown Park",
+        "difficulty": "☆",
+        "location": "Rosemary Brown Park"
+    },
+    {
+        "name": "Rosemont Park",
+        "difficulty": "☆",
+        "location": "Rosemont Park"
+    },
+    {
+        "name": "Ross Park",
+        "difficulty": "☆",
+        "location": "Ross Park"
+    },
+    {
+        "name": "Roundhouse Turntable Plaza",
+        "difficulty": "☆",
+        "location": "Roundhouse Turntable Plaza"
+    },
+    {
+        "name": "Rupert Park",
+        "difficulty": "☆",
+        "location": "Rupert Park"
+    },
+    {
+        "name": "Salsbury Park",
+        "difficulty": "☆",
+        "location": "Salsbury Park"
+    },
+    {
+        "name": "Seaforth Peace Park",
+        "difficulty": "☆",
+        "location": "Seaforth Peace Park"
+    },
+    {
+        "name": "Shannon Park",
+        "difficulty": "☆",
+        "location": "Shannon Park"
+    },
+    {
+        "name": "Shaughnessy Park",
+        "difficulty": "☆",
+        "location": "Shaughnessy Park"
+    },
+    {
+        "name": "Slocan Park",
+        "difficulty": "☆",
+        "location": "Slocan Park"
+    },
+    {
+        "name": "Spanish Banks Beach Park",
+        "difficulty": "☆",
+        "location": "Spanish Banks Beach Park"
+    },
+    {
+        "name": "Sparwood Park",
+        "difficulty": "☆",
+        "location": "Sparwood Park"
+    },
+    {
+        "name": "Stanley Park",
+        "difficulty": "☆",
+        "location": "Stanley Park"
+    },
+    {
+        "name": "Strathcona Linear Park",
+        "difficulty": "☆",
+        "location": "Strathcona Linear Park"
+    },
+    {
+        "name": "Strathcona Park",
+        "difficulty": "☆",
+        "location": "Strathcona Park"
+    },
+    {
+        "name": "Sunnyside Park",
+        "difficulty": "☆",
+        "location": "Sunnyside Park"
+    },
+    {
+        "name": "Sunrise Park",
+        "difficulty": "☆",
+        "location": "Sunrise Park"
+    },
+    {
+        "name": "Sunset Park",
+        "difficulty": "☆",
+        "location": "Sunset Park"
+    },
+    {
+        "name": "Sutcliffe Park",
+        "difficulty": "☆",
+        "location": "Sutcliffe Park"
+    },
+    {
+        "name": "Tatlow Park",
+        "difficulty": "☆",
+        "location": "Tatlow Park"
+    },
+    {
+        "name": "Tea Swamp Park",
+        "difficulty": "☆",
+        "location": "Tea Swamp Park"
+    },
+    {
+        "name": "Tecumseh Park",
+        "difficulty": "☆",
+        "location": "Tecumseh Park"
+    },
+    {
+        "name": "Templeton Park",
+        "difficulty": "☆",
+        "location": "Templeton Park"
+    },
+    {
+        "name": "Thornton Park",
+        "difficulty": "☆",
+        "location": "Thornton Park"
+    },
+    {
+        "name": "Thunderbird Park",
+        "difficulty": "☆",
+        "location": "Thunderbird Park"
+    },
+    {
+        "name": "Tisdall Park",
+        "difficulty": "☆",
+        "location": "Tisdall Park"
+    },
+    {
+        "name": "Trafalgar Park",
+        "difficulty": "☆",
+        "location": "Trafalgar Park"
+    },
+    {
+        "name": "Trillium Park",
+        "difficulty": "☆",
+        "location": "Trillium Park"
+    },
+    {
+        "name": "Valdez Park",
+        "difficulty": "☆",
+        "location": "Valdez Park"
+    }
+]
