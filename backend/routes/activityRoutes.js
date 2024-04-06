@@ -12,8 +12,9 @@ router.post("/add", async (req, res) => {
   const name = req.body.name;
   const difficulty = req.body.difficulty;
   const location = req.body.location;
+  const type = req.body.type;
 
-  const activity = await addActivity(name, difficulty, location);
+  const activity = await addActivity(name, difficulty, location, type);
   res.send(activity);
 });
 

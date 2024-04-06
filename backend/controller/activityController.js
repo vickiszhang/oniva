@@ -7,21 +7,21 @@ const COLLECTION = "activities"
 const DATABASE = "arcteryx"
 
 
-const addActivity = async (name, difficulty, location) => {
-    const insert = async (name, difficulty, location) => {
+const addActivity = async (name, difficulty, location, type) => {
+    const insert = async (name, difficulty, location, type) => {
       try {
         await client.connect();
         const database = client.db(DATABASE);
         const activities = database.collection(COLLECTION);
   
-        const doc = { name: name, difficulty: difficulty, location: location};
+        const doc = { name: name, difficulty: difficulty, location: location, type: type};
         const result = await activities.insertOne(doc);
         return result;
       } finally {
         await client.close();
       }
     };
-    const result = await insert(name, difficulty, location);
+    const result = await insert(name, difficulty, location, type);
     return result;
   };
 
@@ -35,7 +35,7 @@ const getActivities = async () => {
           const activities = database.collection(COLLECTION);
     
           const query = {};
-          const options = { projection: { name: 1, difficulty: 1, location: 1 } };
+          const options = { projection: { name: 1, difficulty: 1, location: 1 , type: 1} };
           const cursor = activities.find(query, options);
           const result = [];
           await cursor.forEach((entry) => {
