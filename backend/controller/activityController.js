@@ -34,12 +34,13 @@ const addActivity = async (req, res, next) => {
 const getActivities = async (req, res, next) => {
     let activities;
     try {
-        activities = await Activities.find();
+        activities = await Activity.find();
     } catch (e) {
       console.log(e);
     }
   
     if (!activities) {
+        console.log(activities);
       return res.status(500).json({ message: "Unexpected error" });
     }
   
