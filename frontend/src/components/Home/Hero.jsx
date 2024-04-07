@@ -14,14 +14,12 @@ const Hero = () => {
             >
                 <div className="flex flex-col font-open_sans text-white w-4/5">
                     <span className="font-merriweather text-7xl">
-                        Adventure Awaits
+                        Oniva: Adventure Awaits
                     </span>
                     <div className="flex flex-col text-2xl mt-[10vh] w-60">
                         Find a trail for today.
-                        <a  href="#middle">
-                            <button
-                                className="mt-20 w-full text-black bg-white rounded-sm hover:bg-black hover:text-white border-2 border-transparent hover:border-white transition duration-800 ease-in-out focus:outline-none"
-                            >
+                        <a href="#middle">
+                            <button className="mt-20 w-full text-black bg-white rounded-sm hover:bg-black hover:text-white border-2 border-transparent hover:border-white transition duration-800 ease-in-out focus:outline-none">
                                 START HERE
                             </button>
                         </a>

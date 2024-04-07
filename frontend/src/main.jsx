@@ -10,6 +10,7 @@ import Hero from './pages/Home.jsx';
 import Vision from './components/Vision/Vision.jsx';
 import Rating from './components/Vision/Rating.jsx';
 import Quiz1 from './components/Home/Quiz/Quiz1.jsx';
+import GenericDisplay from './components/View/GenericDisplay.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/vision",
     element: <Vision />,
+  },
+  {
+    path: "/view",
+    element: <GenericDisplay />,
   }
 ]);
 

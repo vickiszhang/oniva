@@ -46,13 +46,13 @@ const Rating = ({ confidence }) => {
                         variants={{
                             visible: {
                                 background: `conic-gradient(
-                            #00ff00 ${degrees}deg,
+                            #97D195 ${degrees}deg,
                             #161616 ${degrees}deg
                         )`,
                             },
                             hidden: {
                                 background: `conic-gradient(
-                            #00ff00 ${0}deg,
+                            #97D195 ${0}deg,
                             #161616 ${0}deg
                         )`,
                             },
