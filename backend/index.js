@@ -12,7 +12,7 @@ app.use(express.json());
 app.use("/activities", activitiesRouter);
 app.use(cors());
 
-const MONGODB_URI = 'mongodb://0.0.0.0:27017';
+const MONGODB_URI = 'mongodb://0.0.0.0:27017/arcteryx';
 mongoose.connect(`${MONGODB_URI}`).catch((e) => console.log(e));
 
 app.listen(3000, async () => {
