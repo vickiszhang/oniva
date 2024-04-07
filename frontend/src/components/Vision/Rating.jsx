@@ -6,6 +6,15 @@ import { useNavigate } from "react-router-dom";
 import Finish from "./Finish";
 
 const Rating = ({ confidence }) => {
+    let activities = ["park", "running", "cycling", "hiking", "climbing"];
+    let difficulty = ["beginner", "intermediate", "hard"];
+    let active = [
+        activities[Math.max(Math.round(confidence / 20) - 1, 0)], //middle
+        activities[Math.min(Math.round(confidence / 20), 5)],     //right
+        activities[Math.max(Math.round(confidence / 20) - 2, 0)], //left
+    ];
+    let diff = [difficulty[Math.max(Math.round(confidence / 33) - 1, 0)]];
+
     const [flag, setFlag] = useState(false);
     // Convert confidence to degrees
     const degrees = (confidence / 100) * 360;
@@ -104,7 +113,9 @@ const Rating = ({ confidence }) => {
             </div>
             <div
                 className={`${
-                    flag ? "opacity-100 absolute top-0" : "opacity-0 -z-10 relative"
+                    flag
+                        ? "opacity-100 absolute top-0"
+                        : "opacity-0 -z-10 relative"
                 } transition delay-[1200ms] duration-1000 ease-in-out`}
             >
                 <Finish />
