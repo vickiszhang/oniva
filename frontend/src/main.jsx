@@ -6,34 +6,24 @@ import {
 } from "react-router-dom";
 import './index.css'
 
-import Home from './pages/Home.jsx';
-import Vision from './components/Vision.jsx';
+import Hero from './pages/Home.jsx';
+import Vision from './components/Vision/Vision.jsx';
+import Rating from './components/Vision/Rating.jsx';
+import Quiz1 from './components/Home/Quiz/Quiz1.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Hero />,
   },
   {
-    path: "/cycling",
+    path: "/quiz",
+    element: <Quiz1 />,
+  },
+  {
+    path: "/vision",
     element: <Vision />,
-  },
-  {
-    path: "/climbing",
-    element: <Home />,
-  },
-  {
-    path: "/parks",
-    element: <Home />,
-  },
-  {
-    path: "/trail",
-    element: <Home />,
-  },
-  {
-    path: "/hiking",
-    element: <Home />,
-  },
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
