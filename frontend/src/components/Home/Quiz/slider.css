@@ -1,0 +1,43 @@
+/* Styles for the input range slider */
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2px; /* thin height */
+    background: black; /* black track */
+    outline: none;
+    border-radius: 5px; /* rounded edges */
+  }
+  
+  /* Styling the slider thumb */
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; /* thumb width */
+    height: 20px; /* thumb height */
+    background: black; /* black thumb */
+    border-radius: 50%; /* round shape */
+    cursor: pointer;
+  }
+  
+  /* Styling for when the slider is dragged */
+  input[type=range]::-moz-range-thumb {
+    width: 20px; /* thumb width */
+    height: 20px; /* thumb height */
+    background: black; /* black thumb */
+    border-radius: 50%; /* round shape */
+    cursor: pointer;
+  }
+  
+  /* Styling for when the slider is dragged in Internet Explorer */
+  input[type=range]::-ms-thumb {
+    width: 20px; /* thumb width */
+    height: 20px; /* thumb height */
+    background: black; /* black thumb */
+    border-radius: 50%; /* round shape */
+    cursor: pointer;
+  }
+  
+  /* Styling for when the slider is active */
+  input[type=range]:active::-webkit-slider-thumb {
+    background: #555; /* darker thumb when active */
+  }
