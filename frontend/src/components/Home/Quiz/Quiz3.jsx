@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import mountain from "./../assets/Group 10.png";
 import Quiz4 from "./Quiz4";
 
-const Quiz3 = ({ add }) => {
+const Quiz3 = ({ add, submit }) => {
     const [selected, setSelected] = useState(false);
 
     return (
@@ -58,7 +58,7 @@ const Quiz3 = ({ add }) => {
                     selected ? "opacity-100" : "opacity-0 -z-10"
                 } transition delay-1000 duration-1000 ease-in-out absolute`}
             >
-                <Quiz4 add={add}/>
+                <Quiz4 add={add} submit ={submit}/>
             </div>
         </div>
     );

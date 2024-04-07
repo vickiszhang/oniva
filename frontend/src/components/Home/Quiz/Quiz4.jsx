@@ -3,12 +3,13 @@ import left from "./../assets/lwft.png";
 import right from "./../assets/rwght.png";
 import arrow from "./../assets/arrow.png";
 import "./slider.css";
-const Quiz4 = ({ add }) => {
+const Quiz4 = ({ add, submit }) => {
     const [selected, setSelected] = useState(false);
     const [value, setValue] = useState(0);
     const handleSliderChange = (event) => {
         setValue(event.target.value);
         console.log(value);
+        add(value);
     };
     
     return (
@@ -36,6 +37,7 @@ const Quiz4 = ({ add }) => {
                                 type="range"
                                 className="w-full slider mt-8"
                                 min="0"
+                                // defaultValue="50"
                                 max="100"
                                 value={value}
                                 onChange={handleSliderChange}
@@ -52,10 +54,12 @@ const Quiz4 = ({ add }) => {
                 className="w-1/5 bg-white mt-[15vh] border-b-2 border-gray-800 transition duration-800 ease-in-out focus:outline-none"
                 onClick={() => {
                     setSelected(true);
-                    selectDistance = value;
                 }}
             >
-                <div className="group flex flex-row items-center justify-start hover:cursor-pointer hover:opacity-100 opacity-60 transition duration-500 ease-in-out">
+                <div className="group flex flex-row items-center justify-start hover:cursor-pointer hover:opacity-100 opacity-60 transition duration-500 ease-in-out"
+                    onClick={() => {
+                        submit();
+                    }}>
                     <span className="w-[10vw] text-2xl">Find Trail</span>
                     <div className="w-full flex flex-row justify-end items-end">
                         <img

@@ -6,7 +6,7 @@ import group3 from "./../assets/Group 9.png";
 import bino from "./../assets/bino.png";
 import Quiz3 from "./Quiz3";
 
-const Quiz2 = ({ add }) => {
+const Quiz2 = ({ add, submit }) => {
     const [selected, setSelected] = useState(false);
 
     return (
@@ -61,7 +61,7 @@ const Quiz2 = ({ add }) => {
                     selected ? "opacity-100" : "opacity-0 -z-10"
                 } transition delay-1000 duration-1000 ease-in-out absolute`}
             >
-                <Quiz3 add={add}/>
+                <Quiz3 add={add} submit ={submit}/>
             </div>
         </div>
     );
