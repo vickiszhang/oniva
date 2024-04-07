@@ -1,6 +1,7 @@
 const dotenv = require("dotenv");
 const express = require("express");
 const activitiesRouter = require("./routes/activityRoutes.js");
+const parksRouter = require('./routes/parkRoutes.js');
 const mongoose = require("mongoose");
 const cors = require("cors");
 
@@ -9,7 +10,8 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use("/activities", activitiesRouter);
+// app.use("/activities", activitiesRouter);
+app.use("/parks", parksRouter);
 app.use(cors());
 
 const MONGODB_URI = 'mongodb://0.0.0.0:27017/arcteryx';
