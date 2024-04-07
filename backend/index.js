@@ -1,9 +1,14 @@
 const dotenv = require("dotenv");
 const express = require("express");
-const activitiesRouter = require("./routes/activityRoutes.js");
-const parksRouter = require('./routes/parkRoutes.js');
+const climbingRouter = require('/routes/climbingRoutes.js')
+const cyclingRouter = require('/routes/cyclingRoutes.js')
+const hikingRouter = require('/routes/hikingRouter.js')
+const parkRouter = require('/routes/parkRoutes.js')
+const runningRouter = require('./routes/runningRoutes.js');
+
 const mongoose = require("mongoose");
 const cors = require("cors");
+const hiking = require("./models/hiking.js");
 
 
 dotenv.config();
@@ -11,7 +16,11 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 // app.use("/activities", activitiesRouter);
-app.use("/parks", parksRouter);
+app.use("/climbing", climbingRouter);
+app.use("/cycling", cyclingRouter);
+app.use("/hiking", hikingRouter);
+app.use("/park", parkRouter);
+app.use("/running", runningRouter);
 app.use(cors());
 
 const MONGODB_URI = 'mongodb://0.0.0.0:27017/arcteryx';

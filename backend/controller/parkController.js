@@ -55,7 +55,7 @@ const deletePark = async (req, res, next) => {
       return res.status(500).json({ message: "Unexpected error occured" });
     }
   
-    if (!gift) {
+    if (!park) {
       return res.status(404).json({ message: "Park not found" });
     }
   
