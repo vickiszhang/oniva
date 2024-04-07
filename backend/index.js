@@ -19,6 +19,7 @@ app.use("/cycling", cyclingRouter);
 app.use("/hiking", hikingRouter);
 app.use("/park", parkRouter);
 app.use("/running", runningRouter);
+ 
 
 const MONGODB_URI = "mongodb://0.0.0.0:27017/youCode";
 mongoose.connect(`${MONGODB_URI}`).catch((e) => console.log(e));
