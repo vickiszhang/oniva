@@ -9,10 +9,6 @@ import falsecreek from "./../assets/falsecreek.png";
 import arrow from "./../assets/arrow.png";
 import axios from "axios";
 
-
-
-
-
 const Results = () => {
     const location = useLocation();
 
