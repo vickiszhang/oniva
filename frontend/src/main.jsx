@@ -25,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/vision",
-    element: <Rating confidence={90} />,
+    element: <Vision />,
   },
   {
     path: "/vision/range",
