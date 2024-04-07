@@ -14,7 +14,7 @@ import eStar from "./Star 10.svg";
 
 const Finish = () => {
     const navigate = useNavigate();
-    const array = [];
+    const array = []; //change array
     function submit() {
         console.log("submitting ....", array);
         navigate("/results", { state: { fields: array } });

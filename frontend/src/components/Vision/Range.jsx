@@ -15,11 +15,11 @@ const Range = ({ add, submit }) => {
         add(value);
     };
 
-    const array = [];
+    const array = []; //change array
 
     function submit() {
         console.log("submitting ....", array);
-        navigate("/results", {state:{fields: array}});
+        navigate("/results", {state:{fields: array}}); //
     }
     
     return (

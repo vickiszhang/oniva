@@ -25,6 +25,9 @@ const Hero = () => {
                         </a>
                     </div>
                 </div>
+                <div className="w-screen h-16 absolute bottom-0 flex flex-row justify-end items-end">
+                    <img src={logo} className="pb-8 pr-8 h-32"/>
+                </div>
             </div>
         </>
     );
