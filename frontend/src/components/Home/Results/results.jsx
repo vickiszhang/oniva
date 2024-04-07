@@ -2,8 +2,10 @@
 import React, { useEffect, useState } from "react";
 import {useLocation} from 'react-router-dom';
 import group1 from "./../assets/Group 7.png";
-import group2 from "./../assets/Group 8.png";
-import group3 from "./../assets/Group 9.png";
+import stanley from "./../assets/stanleypark.png";
+import sunset from "./../assets/sunsetbeach.png";
+import falsecreek from "./../assets/falsecreek.png";
+
 import arrow from "./../assets/arrow.png";
 import axios from "axios";
 
@@ -29,15 +31,15 @@ const Results = () => {
               console.log(data);
             });
     
-            if (fields[2] == "beginner") {
+            if (fields[2] == "beginner") { 
                 let filteredData = data.filter(item => item.difficulty.length <= 2);
                 setFilteredData(filteredData);
                 console.log(filteredData);
-            }
+            } 
             if (fields[2] == "intermediate") {
                 let filteredData = data.filter(item => item.difficulty.length <= 3);
                 setFilteredData(filteredData);
-
+ 
                 console.log(filteredData);
             }
             if (fields[2] == "expert") {
@@ -61,12 +63,12 @@ const Results = () => {
       if (filteredData.length >= 3) {
         activities = filteredData.slice(0, 3).map((item, index) => (
             <div key={item.id}>
-                <span className="text-2xl">{item.name}</span>
+                <span className="text-xl">{item.name}</span>
                 <img
-                    src={group1}
+                    src={index === 0 ? stanley : index === 1 ? sunset : falsecreek}
                     alt={item.name}
-                    className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
-                    onClick={() => {
+                    className="h-[300px] w-[300px] object-cover opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
+                    onClick={() => { 
                         setSelected(true);
                     }}
                 />
