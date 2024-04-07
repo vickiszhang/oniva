@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
     const navigate = useNavigate();
-    const routeChange = (route) =>{ 
-      navigate(route);
-    }
+    const routeChange = (route) => {
+        navigate(route);
+    };
 
     return (
         <>
@@ -18,12 +18,13 @@ const Hero = () => {
                     </span>
                     <div className="flex flex-col text-2xl mt-[10vh] w-60">
                         Find a trail for today.
-                        <button
-                            className="mt-20 w-full text-black bg-white rounded-sm hover:bg-black hover:text-white border-2 border-transparent hover:border-white transition duration-800 ease-in-out focus:outline-none"
-                            onClick={() => {routeChange('/quiz')}}
-                        >
-                            START HERE
-                        </button>
+                        <a  href="#middle">
+                            <button
+                                className="mt-20 w-full text-black bg-white rounded-sm hover:bg-black hover:text-white border-2 border-transparent hover:border-white transition duration-800 ease-in-out focus:outline-none"
+                            >
+                                START HERE
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>

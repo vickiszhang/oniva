@@ -10,7 +10,7 @@ const Start = () => {
     }
 
     return (
-        <div className="w-screen h-screen flex flex-col justify-center items-center">
+        <div className="w-screen h-screen flex flex-col justify-center items-center" id="middle">
             <div className="w-5/6 h-[1px] bg-gray-700" />
             <div className="flex flex-row mt-24 w-full gap-[10vw] justify-center">
                 <img

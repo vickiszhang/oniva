@@ -24,3 +24,7 @@
 ::-webkit-scrollbar-thumb {
   transition: 200ms ease-in-out;
 }
+
+html {
+  scroll-behavior: smooth;
+ }
