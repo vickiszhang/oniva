@@ -118,7 +118,7 @@ const Rating = ({ confidence }) => {
                         : "opacity-0 -z-10 relative"
                 } transition delay-[1200ms] duration-1000 ease-in-out`}
             >
-                <Finish />
+                <Finish activity={active} difficulty={diff}/>
             </div>
         </div>
     );

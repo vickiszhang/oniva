@@ -12,9 +12,12 @@ import image15 from "./image 12.png";
 import fStar from "./Star 9.svg";
 import eStar from "./Star 10.svg";
 
-const Finish = () => {
+const Finish = (activity, difficulty) => {
     const navigate = useNavigate();
-    const array = [];
+    let array = [];
+    console.log(activity);
+    array = [activity["activity"][0], activity["activity"][0], activity["difficulty"][0]]; //2nd element for filler
+    console.log(array);
     function submit() {
         console.log("submitting ....", array);
         navigate("/results", { state: { fields: array } });
