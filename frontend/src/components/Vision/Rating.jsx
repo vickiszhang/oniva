@@ -28,7 +28,7 @@ const Rating = ({ confidence }) => {
 
     const navigate = useNavigate();
     const routeChange = (loc) => {
-        navigate("/vision/" + loc);
+        navigate("/vision/" + loc); //pass onto Range here
     };
 
     return (
