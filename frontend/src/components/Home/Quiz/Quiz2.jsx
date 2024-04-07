@@ -1,12 +1,15 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import group1 from "./../assets/Group 7.png";
 import group2 from "./../assets/Group 8.png";
 import group3 from "./../assets/Group 9.png";
 import bino from "./../assets/bino.png";
 import Quiz3 from "./Quiz3";
 
-const Quiz2 = () => {
+const Quiz2 = (activities) => {
+    useEffect(() => {
+        console.log(activities);
+    }, [activities])
     const [selected, setSelected] = useState(false);
     return (
         <div className="w-screen h-screen bg-white flex flex-col items-center justify-center">

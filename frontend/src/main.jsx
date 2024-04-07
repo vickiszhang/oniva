@@ -7,6 +7,7 @@ import {
 import './index.css'
 
 import Home from './pages/Home.jsx';
+import Vision from './components/Vision.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/cycling",
-    element: <Home />,
+    element: <Vision />,
   },
   {
     path: "/climbing",
