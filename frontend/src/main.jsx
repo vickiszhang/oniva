@@ -11,6 +11,7 @@ import Vision from './components/Vision/Vision.jsx';
 import Rating from './components/Vision/Rating.jsx';
 import Quiz1 from './components/Home/Quiz/Quiz1.jsx';
 import GenericDisplay from './components/View/GenericDisplay.jsx';
+import Results from './components/Home/Results/results.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,8 @@ const router = createBrowserRouter([
   {
     path: "/view",
     element: <GenericDisplay />,
+    path: "/results",
+    element: <Results />,
   }
 ]);
 

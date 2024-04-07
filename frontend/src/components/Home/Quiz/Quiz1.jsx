@@ -7,16 +7,25 @@ import group3 from "./../assets/Group 3.png";
 import group4 from "./../assets/Group 4.png";
 import group5 from "./../assets/Group 5.png";
 import Quiz2 from "./Quiz2";
+import { useNavigate } from "react-router-dom";
+
 
 const Quiz1 = () => {
     const [selected, setSelected] = useState(false);
     const [array, setArray] = useState([]);
+    const navigate = useNavigate()
+
 
     function addField(src) {
         let newArray = array;
         newArray.push(src);
         setArray(newArray);
         console.log(array);
+    }
+
+    function submitFields() {
+        console.log("submitting ....", array);
+        navigate("/results", {state:{fields: array}});
     }
 
 
@@ -62,7 +71,7 @@ const Quiz1 = () => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
-                            addField("parks");
+                            addField("park");
                         }}
                     />
                 </div>
@@ -72,7 +81,7 @@ const Quiz1 = () => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
-                            addField("trail running");
+                            addField("running");
                         }}
                     />
                     <img
@@ -90,7 +99,7 @@ const Quiz1 = () => {
                     selected ? "opacity-100" : "opacity-0 -z-10"
                 } transition delay-1000 duration-1000 ease-in-out absolute`}
             >
-                <Quiz2 add={ addField }/>
+                <Quiz2 add={ addField } submit = {submitFields}/>
             </div>
         </div>
     );
