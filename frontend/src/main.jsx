@@ -12,6 +12,7 @@ import Rating from './components/Vision/Rating.jsx';
 import Quiz1 from './components/Home/Quiz/Quiz1.jsx';
 import GenericDisplay from './components/View/GenericDisplay.jsx';
 import Results from './components/Home/Results/Results.jsx';
+import Range from './components/Vision/Range.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/vision",
     element: <Vision />,
+  },
+  {
+    path: "/vision/range",
+    element: <Range />,
   },
   {
     path: "/view",

@@ -8,7 +8,6 @@ import alouette from "./../assets/alouette.png";
 import arrow from "./../assets/arrow.png";
 import axios from "axios";
 
-
 const Results = () => {
     const location = useLocation();
 
