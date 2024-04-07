@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import logo from "./assets/Group 11.png";
 const Hero = () => {
     const navigate = useNavigate();
     const routeChange = (route) => {
