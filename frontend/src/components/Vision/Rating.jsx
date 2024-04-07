@@ -10,7 +10,7 @@ const Rating = ({ confidence }) => {
     let difficulty = ["beginner", "intermediate", "hard"];
     let active = [
         activities[Math.max(Math.round(confidence / 20) - 1, 0)], //middle
-        activities[Math.min(Math.round(confidence / 20), 5)],     //right
+        activities[Math.min(Math.round(confidence / 20), 4)],     //right
         activities[Math.max(Math.round(confidence / 20) - 2, 0)], //left
     ];
     let diff = [difficulty[Math.max(Math.round(confidence / 33) - 1, 0)]];
