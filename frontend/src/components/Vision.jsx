@@ -6,7 +6,7 @@ const Vision = () => {
 const analyzeImage = async () => {
     try {
       const formData = new FormData();
-      const file = await fetch('./jacket.png');
+      const file = await fetch('./guy.jpg');
       const blob = await file.blob();
       formData.append('file', blob);
   
@@ -27,47 +27,35 @@ const analyzeImage = async () => {
                 features: [
                   {
                     type: 'LABEL_DETECTION',
-                    maxResults: 150,
-                  },
-                  {
-                    type: 'WEB_DETECTION', // Add entity detection
-                    maxResults: 10,
+                    maxResults: 50,
                   },
                 ],
               },
             ],
           }
         );
+  
         if (response.data.responses && response.data.responses.length > 0) {
           const labels = response.data.responses[0].labelAnnotations;
-          const webEntities = response.data.responses[0].webDetection.webEntities;
   
-          if (labels && webEntities) {
-            // Filter labels based on entity detection
-            const clothesLabels = labels.filter(label =>
-              webEntities.some(entity =>
-                entity.description.toLowerCase().includes('clothing') ||
-                entity.description.toLowerCase().includes('fashion') ||
-                entity.description.toLowerCase().includes('apparel') ||
-                entity.description.toLowerCase().includes('garment') ||
-                entity.description.toLowerCase().includes('dress') ||
-                entity.description.toLowerCase().includes('shirt') ||
-                entity.description.toLowerCase().includes('pants') ||
-                entity.description.toLowerCase().includes('skirt') ||
-                entity.description.toLowerCase().includes('jeans') ||
-                entity.description.toLowerCase().includes('jacket')
-              )
+          if (labels) {
+            // Filter labels based on specific terms
+            const filteredLabels = labels.filter(label =>
+              label.description.toLowerCase().includes('outerwear') ||
+              label.description.toLowerCase().includes('sports') ||
+              label.description.toLowerCase().includes('jacket') ||
+              label.description.toLowerCase().includes('sports')
             );
   
-            const itemTypes = clothesLabels.map(label => label.description);
-            console.log('Detected clothes-related item types:', itemTypes);
+            const itemTypes = filteredLabels.map(label => label.description);
+            console.log('Filtered item types:', itemTypes);
           } else {
-            console.error(response.data.responses);
+            console.error('No labels detected.');
           }
         } else {
           console.error('No response received from the Vision API.');
         }
-      };
+      }
     } catch (error) {
       console.error('Error analyzing image:', error);
     }
