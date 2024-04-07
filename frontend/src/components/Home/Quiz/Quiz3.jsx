@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import mountain from "./../assets/Group 10.png";
 import Quiz4 from "./Quiz4";
 
-const Quiz3 = () => {
+const Quiz3 = ({ add }) => {
     const [selected, setSelected] = useState(false);
-    let [selectDifficulty] = useState(0);
+
     return (
         <div className="w-screen h-screen bg-white flex flex-col items-center justify-center">
             <div
@@ -21,16 +21,31 @@ const Quiz3 = () => {
                             ARE YOU A?
                         </span>
                         <div className="w-[15vw]">
-                            <button className="w-full text-black bg-white rounded-sm mt-8 hover:bg-black hover:text-white border-2 border-black hover:border-transparent transition duration-800 ease-in-out focus:outline-none"
-                            onClick={()=>{setSelected(true),selectDifficulty = 1}}>
+                            <button
+                                className="w-full text-black bg-white rounded-sm mt-8 hover:bg-black hover:text-white border-2 border-black hover:border-transparent transition duration-800 ease-in-out focus:outline-none"
+                                onClick={() => {
+                                    setSelected(true);
+                                    add("beginner");
+                                }}
+                            >
                                 BEGINNER
                             </button>
-                            <button className="w-full text-black bg-white rounded-sm mt-8 hover:bg-black hover:text-white border-2 border-black hover:border-transparent transition duration-800 ease-in-out focus:outline-none"
-                            onClick={()=>{setSelected(true),selectDifficulty = 2}}>
+                            <button
+                                className="w-full text-black bg-white rounded-sm mt-8 hover:bg-black hover:text-white border-2 border-black hover:border-transparent transition duration-800 ease-in-out focus:outline-none"
+                                onClick={() => {
+                                    setSelected(true);
+                                    add("intermediate");
+                                }}
+                            >
                                 INTERMEDIATE
                             </button>
-                            <button className="w-full text-black bg-white rounded-sm mt-8 hover:bg-black hover:text-white border-2 border-black hover:border-transparent transition duration-800 ease-in-out focus:outline-none"
-                            onClick={()=>{setSelected(true),selectDifficulty = 3}}>
+                            <button
+                                className="w-full text-black bg-white rounded-sm mt-8 hover:bg-black hover:text-white border-2 border-black hover:border-transparent transition duration-800 ease-in-out focus:outline-none"
+                                onClick={() => {
+                                    setSelected(true);
+                                    add("expert");
+                                }}
+                            >
                                 EXPERT
                             </button>
                         </div>
@@ -43,7 +58,7 @@ const Quiz3 = () => {
                     selected ? "opacity-100" : "opacity-0 -z-10"
                 } transition delay-1000 duration-1000 ease-in-out absolute`}
             >
-                <Quiz4 />
+                <Quiz4 add={add}/>
             </div>
         </div>
     );

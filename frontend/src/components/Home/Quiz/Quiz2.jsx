@@ -6,11 +6,9 @@ import group3 from "./../assets/Group 9.png";
 import bino from "./../assets/bino.png";
 import Quiz3 from "./Quiz3";
 
-const Quiz2 = (activities) => {
-    useEffect(() => {
-        console.log(activities);
-    }, [activities])
+const Quiz2 = ({ add }) => {
     const [selected, setSelected] = useState(false);
+
     return (
         <div className="w-screen h-screen bg-white flex flex-col items-center justify-center">
             <div
@@ -37,6 +35,7 @@ const Quiz2 = (activities) => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
+                            add("peace");
                         }}
                     />
                     <img
@@ -44,6 +43,7 @@ const Quiz2 = (activities) => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
+                            add("peace");
                         }}
                     />
                     <img
@@ -51,6 +51,7 @@ const Quiz2 = (activities) => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
+                            add("peace");
                         }}
                     />
                 </div>
@@ -60,7 +61,7 @@ const Quiz2 = (activities) => {
                     selected ? "opacity-100" : "opacity-0 -z-10"
                 } transition delay-1000 duration-1000 ease-in-out absolute`}
             >
-                <Quiz3 />
+                <Quiz3 add={add}/>
             </div>
         </div>
     );

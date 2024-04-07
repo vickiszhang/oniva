@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import cycle from "./../assets/cycle.png";
 import group1 from "./../assets/Group 1.png";
 import group2 from "./../assets/Group 2.png";
@@ -10,9 +10,16 @@ import Quiz2 from "./Quiz2";
 
 const Quiz1 = () => {
     const [selected, setSelected] = useState(false);
-    // eslint-disable-next-line no-unused-vars
-    let selectActivity = [];
-    const [Activities, setActivities] = useState(selectActivity)
+    const [array, setArray] = useState([]);
+
+    function addField(src) {
+        let newArray = array;
+        newArray.push(src);
+        setArray(newArray);
+        console.log(array);
+    }
+
+
     return (
         <div className="w-screen h-screen bg-white flex flex-col items-center justify-center">
             <div
@@ -39,9 +46,7 @@ const Quiz1 = () => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
-                            selectActivity.push("cycling")
-                            setActivities(selectActivity);
-
+                            addField("cycling")
                         }}
                     />
                     <img
@@ -49,8 +54,7 @@ const Quiz1 = () => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
-                            selectActivity.push("climbing");
-                            setActivities(selectActivity);
+                            addField("climbing");
                         }}
                     />
                     <img
@@ -58,8 +62,7 @@ const Quiz1 = () => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
-                            selectActivity.push("parks");
-                            setActivities(selectActivity);
+                            addField("parks");
                         }}
                     />
                 </div>
@@ -69,8 +72,7 @@ const Quiz1 = () => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
-                            selectActivity.push("trail running");
-                            setActivities(selectActivity);
+                            addField("trail running");
                         }}
                     />
                     <img
@@ -78,8 +80,7 @@ const Quiz1 = () => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
-                            selectActivity.push("hiking");
-                            setActivities(selectActivity);
+                            addField("hiking");
                         }}
                     />
                 </div>
@@ -89,7 +90,7 @@ const Quiz1 = () => {
                     selected ? "opacity-100" : "opacity-0 -z-10"
                 } transition delay-1000 duration-1000 ease-in-out absolute`}
             >
-                <Quiz2 activities={Activities} />
+                <Quiz2 add={ addField }/>
             </div>
         </div>
     );

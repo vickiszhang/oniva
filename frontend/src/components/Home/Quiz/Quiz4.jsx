@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import left from "./../assets/lwft.png";
 import right from "./../assets/rwght.png";
 import arrow from "./../assets/arrow.png";
 import "./slider.css";
-const Quiz4 = () => {
+const Quiz4 = ({ add }) => {
     const [selected, setSelected] = useState(false);
-    let [selectDistance] = useState(0);
     const [value, setValue] = useState(0);
     const handleSliderChange = (event) => {
         setValue(event.target.value);
         console.log(value);
     };
-
+    
     return (
         <div className="w-screen h-screen bg-white flex flex-col items-center justify-center">
             <span className="text-black font-open_sans text-2xl font-bold">
