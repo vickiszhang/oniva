@@ -1,24 +1,23 @@
 const express = require("express");
 const router = express.Router();
 const {
-  addHiking,
-  getHikings,
-  deleteHiking,
+    addHiking,
+    getHikings,
+    deleteHiking,
 } = require("../controller/hikingController.js");
 const { check, param } = require("express-validator");
-const { validateResults } = require("../middlewares/Validation.js");
-
+const { validateResults } = require("../middlewares/validation.js");
 
 router.post(
     "/add",
     [
-      check("name").not().isEmpty(),
-      check("difficulty").not().isEmpty(),
-      check("location").not().isEmpty(),
-      validateResults,
+        check("name").not().isEmpty(),
+        check("difficulty").not().isEmpty(),
+        check("location").not().isEmpty(),
+        validateResults,
     ],
     addHiking
-  );
+);
 
 router.get("/get", getHikings);
 
@@ -27,6 +26,5 @@ router.delete(
     [param("name").not().isEmpty(), validateResults],
     deleteHiking
 );
-
 
 module.exports = router;
