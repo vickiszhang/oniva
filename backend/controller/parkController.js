@@ -9,7 +9,6 @@ const client = new MongoClient(url);
 const addPark = async (req, res, next) => {
     let park;
     const { name, difficulty, location } = req.body;
-  
     try {
       park = new Park({ name, difficulty, location });
       park = await park.save();
@@ -40,7 +39,6 @@ const getParks = async (req, res, next) => {
         console.log(parks);
       return res.status(500).json({ message: "Unexpected error" });
     }
-  
     return res.status(200).json({ parks });
 };
 
@@ -61,11 +59,9 @@ const deletePark = async (req, res, next) => {
   
     return res.status(200).json({ message: "Park successfully deleted" });
 };
-
   module.exports = {
     addPark,
     getParks,
     deletePark,
-
   };
   

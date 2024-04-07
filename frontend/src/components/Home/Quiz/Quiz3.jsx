@@ -4,6 +4,7 @@ import Quiz4 from "./Quiz4";
 
 const Quiz3 = () => {
     const [selected, setSelected] = useState(false);
+    let [selectDifficulty] = useState(0);
     return (
         <div className="w-screen h-screen bg-white flex flex-col items-center justify-center">
             <div
@@ -21,15 +22,15 @@ const Quiz3 = () => {
                         </span>
                         <div className="w-[15vw]">
                             <button className="w-full text-black bg-white rounded-sm mt-8 hover:bg-black hover:text-white border-2 border-black hover:border-transparent transition duration-800 ease-in-out focus:outline-none"
-                            onClick={()=>{setSelected(true)}}>
+                            onClick={()=>{setSelected(true),selectDifficulty = 1}}>
                                 BEGINNER
                             </button>
                             <button className="w-full text-black bg-white rounded-sm mt-8 hover:bg-black hover:text-white border-2 border-black hover:border-transparent transition duration-800 ease-in-out focus:outline-none"
-                            onClick={()=>{setSelected(true)}}>
+                            onClick={()=>{setSelected(true),selectDifficulty = 2}}>
                                 INTERMEDIATE
                             </button>
                             <button className="w-full text-black bg-white rounded-sm mt-8 hover:bg-black hover:text-white border-2 border-black hover:border-transparent transition duration-800 ease-in-out focus:outline-none"
-                            onClick={()=>{setSelected(true)}}>
+                            onClick={()=>{setSelected(true),selectDifficulty = 3}}>
                                 EXPERT
                             </button>
                         </div>

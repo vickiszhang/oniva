@@ -15,5 +15,4 @@ const cyclingSchema = new Schema({
     required: true,
   },
 });
-
 module.exports = mongoose.model("cycling", cyclingSchema);

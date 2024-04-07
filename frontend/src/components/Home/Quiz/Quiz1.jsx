@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import cycle from "./../assets/cycle.png";
 import group1 from "./../assets/Group 1.png";
@@ -9,6 +10,8 @@ import Quiz2 from "./Quiz2";
 
 const Quiz1 = () => {
     const [selected, setSelected] = useState(false);
+    // eslint-disable-next-line no-unused-vars
+    let [selectActivity] = useState("");
     return (
         <div className="w-screen h-screen bg-white flex flex-col items-center justify-center">
             <div
@@ -35,6 +38,8 @@ const Quiz1 = () => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
+                            selectActivity = "cycling";
+
                         }}
                     />
                     <img
@@ -42,6 +47,7 @@ const Quiz1 = () => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
+                            selectActivity = "climbing";
                         }}
                     />
                     <img
@@ -49,6 +55,7 @@ const Quiz1 = () => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
+                            selectActivity = "parks";
                         }}
                     />
                 </div>
@@ -58,6 +65,7 @@ const Quiz1 = () => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
+                            selectActivity = "trail climbing";
                         }}
                     />
                     <img
@@ -65,6 +73,7 @@ const Quiz1 = () => {
                         className="h-3/4 opacity-70 hover:opacity-100 transition duration-300 ease-in-out hover:cursor-pointer"
                         onClick={() => {
                             setSelected(true);
+                            selectActivity = "hiking";
                         }}
                     />
                 </div>

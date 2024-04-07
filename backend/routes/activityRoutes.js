@@ -7,8 +7,6 @@ const {
 } = require("../controller/activityController.js");
 const { check, param } = require("express-validator");
 const { validateResults } = require("../middlewares/Validation.js");
-
-
 router.post(
     "/add",
     [

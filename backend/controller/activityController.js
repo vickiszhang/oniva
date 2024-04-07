@@ -66,6 +66,5 @@ const deleteActivity = async (req, res, next) => {
     addActivity,
     getActivities,
     deleteActivity,
-
   };
   

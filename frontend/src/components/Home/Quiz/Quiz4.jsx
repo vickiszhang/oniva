@@ -5,6 +5,7 @@ import arrow from "./../assets/arrow.png";
 import "./slider.css";
 const Quiz4 = () => {
     const [selected, setSelected] = useState(false);
+    let [selectDistance] = useState(0);
     const [value, setValue] = useState(0);
     const handleSliderChange = (event) => {
         setValue(event.target.value);
@@ -52,6 +53,7 @@ const Quiz4 = () => {
                 className="w-1/5 bg-white mt-[15vh] border-b-2 border-gray-800 transition duration-800 ease-in-out focus:outline-none"
                 onClick={() => {
                     setSelected(true);
+                    selectDistance = value;
                 }}
             >
                 <div className="group flex flex-row items-center justify-start hover:cursor-pointer hover:opacity-100 opacity-60 transition duration-500 ease-in-out">
