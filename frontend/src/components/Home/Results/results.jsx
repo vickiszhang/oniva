@@ -7,6 +7,7 @@ import alouette from "./../assets/alouette.png";
 
 import arrow from "./../assets/arrow.png";
 import axios from "axios";
+import GenericDisplay from "../../View/GenericDisplay";
 
 const Results = () => {
     const location = useLocation();
@@ -103,6 +104,15 @@ const Results = () => {
 
             </div>
         </div>
+
+        <div
+            className={`${
+                    selected ? "opacity-100" : "opacity-0 -z-10"
+                } transition delay-1000 duration-1000 ease-in-out absolute`}
+            >
+
+                <GenericDisplay/>
+            </div>
     </div>
     );
 };

@@ -1,5 +1,7 @@
 import React from "react";
 import group16 from "./Group 16.png";
+import alouette from "./alouette.png";
+
 import image1 from "./image 1.png";
 import image5 from "./image 5.png";
 import image10 from "./image 10.png";
@@ -14,17 +16,18 @@ const GenericDisplay = () => {
     return (
         <div className="w-screen h-screen flex flex-row items-center justify-center gap-10">
             <div className="h-screen flex flex-col justify-center items-center">
-                <img src={group16} className="h-3/4" />
+                <img src={alouette} className="h-3/4 w-[450px]" />
             </div>
             <div className="flex flex-col justify-center items-start">
                 <span className="text-3xl font-open_sans font-light">
-                    Address:
+                    Address: Maple Ridge, BC V0M 1H0
                 </span>
                 <span className="text-3xl font-open_sans font-light">
-                    Difficulty:
+                    Difficulty: Intermediate
                 </span>
                 <span className="text-3xl font-open_sans font-light">
-                    Website:
+                    Website: 
+                    <a className="hover:underline" href="https://besthikesbc.ca/hiking-alouette-mountain-in-ridge-meadows/"> Aloette Mountain: BestHikes BC</a>
                 </span>
                 <span className="text-3xl font-open_sans font-bold mt-8">
                     Get Into Gear
