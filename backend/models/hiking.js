@@ -1,0 +1,19 @@
+const mongoose =require("mongoose");
+
+const Schema = mongoose.Schema;
+const hikingSchema = new Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  difficulty: {
+    type: String,
+    required: true,
+  },
+  location: {
+    type: String,
+    required: true,
+  },
+});
+
+module.exports = mongoose.model("hiking", hikingSchema);
